@@ -19,6 +19,9 @@ Parse and build BMP files in crystal lang.
 ```crystal
 require "bmp"
 
+bmp = BMP.from_file "spec/sample_640×426.bmp"
+bmp.color_at(639, 425).red.should eq 58
+bmp.color_at(0, 0).green.should eq 130
 ```
 
 ## Development
