@@ -1,0 +1,9 @@
+spec/sample_1280×853.bmp filter=lfs diff=lfs merge=lfs -text
+spec/w3c_home_256.bmp filter=lfs diff=lfs merge=lfs -text
+spec/w3c_home.bmp filter=lfs diff=lfs merge=lfs -text
+spec/w3c_home_gray.bmp filter=lfs diff=lfs merge=lfs -text
+spec/pal8os2v2-16.bmp filter=lfs diff=lfs merge=lfs -text
+spec/sample_1920×1280.bmp filter=lfs diff=lfs merge=lfs -text
+spec/sample_5184×3456.bmp filter=lfs diff=lfs merge=lfs -text
+spec/sample_640×426.bmp filter=lfs diff=lfs merge=lfs -text
+spec/w3c_home_2.bmp filter=lfs diff=lfs merge=lfs -text
