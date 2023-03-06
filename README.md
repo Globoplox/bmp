@@ -9,7 +9,7 @@ Parse and build BMP files in crystal lang.
    ```yaml
    dependencies:
      bmp:
-       github: Globoplox/bmp
+       github: globoplox/bmp
    ```
 
 2. Run `shards install`
@@ -28,4 +28,4 @@ bmp.color_at(0, 0).green.should eq 130
 
 ## Contributors
 
-- [Globoplox](https://github.com/Globoplox) - creator and maintainer
+- [Globoplox](https://github.com/globoplox) - creator and maintainer

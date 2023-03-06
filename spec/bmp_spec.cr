@@ -4,8 +4,8 @@ describe BMP do
   # Colors determined by opening in GIMP
   it "Open a simple bmp" do
     bmp = BMP.from_file "spec/sample_640×426.bmp"
-    bmp.color_at(639, 425).red.should eq 58
-    bmp.color_at(0, 0).green.should eq 130
+    bmp.color(639, 425).red.should eq 58
+    bmp.color(0, 0).green.should eq 130
   end
 
   it "Open a bigger bmp" do
@@ -36,9 +36,14 @@ describe BMP do
     bmp = BMP.from_file "spec/pal8os2v2-16.bmp"
   end
 
-  # TODO: compare file hash
   it "Can write a bmp to a file" do
     bmp = BMP.from_file "spec/pal8os2v2-16.bmp"
+    bmp.to_file "/tmp/wololo.bmp"
+  end
+
+  it "Can build a simple valid BMP file" do
+    bmp = BMP.new 100, 100, :depth_16
+    bmp.color 0, 0, BMP::Color.new red: 0, green: 255, blue: 0
     bmp.to_file "/tmp/wololo.bmp"
   end
 end

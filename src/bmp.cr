@@ -1,6 +1,6 @@
 # Fil structure of a BMP file.
 class BMP
-  SIGNATURE = 0x4D42
+  SIGNATURE = 0x4D42u16
 
   enum HeaderType
     CORE_HEADER           =  12
@@ -186,5 +186,6 @@ class BMP
 end
 
 require "./parse"
-require "./read_pixels"
+require "./decode"
+require "./write"
 require "./build"
