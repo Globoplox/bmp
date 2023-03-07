@@ -149,7 +149,12 @@ class BMP
     end
 
     def color(x, y) : Color
-      Color.new IO::ByteFormat::LittleEndian.decode UInt32, @bmp.@pixel_data + offset x, y
+      o = offset x, y
+      Color.new(
+        blue: @bmp.@pixel_data[o],
+        green: @bmp.@pixel_data[o + 1],
+        red: @bmp.@pixel_data[o + 2],
+      )
     end
 
     def color(x, y, color : Color)
