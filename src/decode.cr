@@ -1,3 +1,4 @@
+# Read and write pixel data from a BMP file. 
 class BMP
   abstract class Decoder
     def initialize(@bmp : BMP)

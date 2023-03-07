@@ -1,4 +1,4 @@
-# TODO: handle signed width/height for moving origin/pixel order
+# Parse a BMP file.
 class BMP
   UNSUPPORTED_COMPRESSION = [
     Compression::BI_BITFIELDS, Compression::BI_ALPHABITFIELDS,

@@ -1,3 +1,4 @@
+# Persist a BMP file.
 class BMP
   abstract class Header
     abstract def write(io : IO)

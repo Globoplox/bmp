@@ -1,4 +1,4 @@
-# Fil structure of a BMP file.
+# File structure of a BMP file.
 class BMP
   SIGNATURE = 0x4D42u16
 

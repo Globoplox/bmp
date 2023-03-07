@@ -1,3 +1,4 @@
+# Create BMP file.
 class BMP
   class InfoHeader < Header
     def initialize(@width, @height, @bit_per_pixel)
