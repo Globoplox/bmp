@@ -1,10 +1,9 @@
 require "./spec_helper"
 
 describe BMP do
-  # Colors determined by opening in GIMP
   it "Open a simple bmp" do
     bmp = BMP.from_file "spec/sample_640×426.bmp"
-    bmp.color(639, 425).red.should eq 58
+    bmp.color(639, 425).blue.should eq 58
     bmp.color(0, 0).green.should eq 130
   end
 
@@ -38,12 +37,16 @@ describe BMP do
 
   it "Can write a bmp to a file" do
     bmp = BMP.from_file "spec/pal8os2v2-16.bmp"
-    bmp.to_file "/tmp/wololo.bmp"
+    tmp_file = File.tempfile "bmp_test_pal8os2v2-16.bmp"
+    bmp.to_file tmp_file
+    tmp_file.delete
   end
 
   it "Can build a simple valid BMP file" do
     bmp = BMP.new 100, 100, :depth_16
     bmp.color 0, 0, BMP::Color.new red: 0, green: 255, blue: 0
-    bmp.to_file "/tmp/wololo.bmp"
+    tmp_file = File.tempfile "bmp_test_create.bmp"
+    bmp.to_file	tmp_file
+    tmp_file.delete
   end
 end

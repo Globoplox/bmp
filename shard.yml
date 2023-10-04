@@ -1,9 +1,9 @@
 name: bmp
-version: 1.0.0
+version: 1.1.0
 
 authors:
   - Globoplox <globoplox@gmail.com>
 
-crystal: 1.7.2
+crystal: 1.9.2
 
 license: MIT

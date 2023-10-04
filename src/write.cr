@@ -124,7 +124,11 @@ class BMP
     io.write @pixel_data
   end
 
-  def to_file(path)
+  def to_file(io : IO)
+    write io
+  end
+  
+  def to_file(path : String | Path)
     File.open path, "w" do |io|
       write io
     end

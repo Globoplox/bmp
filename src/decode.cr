@@ -12,7 +12,7 @@ class BMP
       when {BitPerPixel::DEPTH_16, Compression::BI_RGB} then Bpp16BIRGBDecoder.new bmp
       when {BitPerPixel::DEPTH_24, Compression::BI_RGB} then Bpp24BIRGBDecoder.new bmp
       else
-        raise "Unsupported BPP/Compression: #{bmp.header.bit_per_pixel}/#{bmp.header.as?(InfoHeader).try &.compression}'}"
+        raise "Unsupported BPP/Compression: #{bmp.header.bit_per_pixel}/#{bmp.header.as?(InfoHeader).try &.compression}"
       end
     end
 

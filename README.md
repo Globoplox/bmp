@@ -1,6 +1,7 @@
 # bmp
 
-Parse and build BMP files in crystal lang.
+Parse and build BMP files in crystal lang. No dependency.
+Allows to read most BMP file with [Pluto](https://github.com/phenopolis/pluto).
 
 ## Installation
 
@@ -24,7 +25,16 @@ bmp.color_at(639, 425).red.should eq 58
 bmp.color_at(0, 0).green.should eq 130
 ```
 
-## Development
+### With Pluto
+
+Note that pluto is not listed as a dependency.
+
+```
+require "pluto"
+require "bmp/pluto"
+
+Pluto::ImageRGBA.from_bmp buffer
+```
 
 ## Contributors
 
