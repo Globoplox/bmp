@@ -1,7 +1,7 @@
 # bmp
 
 Parse and build BMP files in crystal lang. No dependency.  
-Allows to simplest BMP files with [Pluto](https://github.com/phenopolis/pluto).
+Allows to open simplest BMP files with [Pluto](https://github.com/phenopolis/pluto).
 
 ## Installation
 
